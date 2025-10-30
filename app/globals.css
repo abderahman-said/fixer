@@ -225,6 +225,11 @@ body {
     }
 }
 
+html[dir="rtl"] .swiper-slide {
+    margin-right: 0 !important;
+    margin-left: 24px !important;
+}
+
 
 /*  */
 

@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -15,6 +15,19 @@ import { useIsRTL } from "@/utils/useIsRTL";
 export function TestimonialsSection({ t }) {
   const swiperRef = useRef(null);
   const isRTL = useIsRTL();
+
+  useEffect(() => {
+    if (!swiperRef.current) return;
+    const swiper = swiperRef.current;
+    try {
+      const currentIndex = swiper.activeIndex || 0;
+      if (typeof swiper.changeDirection === "function") {
+        swiper.changeDirection(isRTL ? "rtl" : "ltr");
+      }
+      swiper.slideTo(currentIndex, 0);
+      if (typeof swiper.update === "function") swiper.update();
+    } catch {}
+  }, [isRTL]);
 
   const handlePrevious = () => {
     if (swiperRef.current) {

@@ -64,9 +64,9 @@ export function Footer({ t }) {
             <input
               type="email"
               placeholder={t("footer.newsletterPlaceholder")}
-              className="w-full bg-[#2a2f4abc] pe-16 sm:pe-20 text-white placeholder-[#f5f5f5bb] px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-full outline-none"
+              className="w-full bg-[#2a2f4abc] pe-16 h-[50px] sm:pe-20 text-white placeholder-[#f5f5f5bb] px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base rounded-full outline-none"
             />
-            <button className="bg-[#FC942A] border-2 sm:border-4 border-[#0F0F20] absolute -top-0.5 sm:-top-1 -end-0.5 sm:-end-1 text-[#0F0F20] px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base rounded-full hover:bg-[#ef8213cf] transition font-medium whitespace-nowrap">
+            <button className="bg-[#FC942A] border-2 h-[50px] sm:border-4 border-[#0F0F20] absolute top-0  -end-0.5 sm:-end-1 text-[#0F0F20] px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 text-sm sm:text-base rounded-full hover:bg-[#ef8213cf] transition font-medium whitespace-nowrap">
               {t("footer.send")}
             </button>
           </div>

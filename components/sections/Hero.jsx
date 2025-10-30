@@ -19,7 +19,7 @@ export function HeroSection({ t }) {
           FIX
         </div>
       </div>
-      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 relative z-10">
+      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 pb-0 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
@@ -50,7 +50,7 @@ export function HeroSection({ t }) {
               </div>
               <div
                 className={
-                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-e border-[#FC942A] "   
+                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-e me-2 border-[#FC942A] "   
                 }
               >
                 <span className="text-[#A8A8A8] text-sm lg:text-base whitespace-nowrap">

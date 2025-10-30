@@ -20,7 +20,7 @@ export default function ServicesSlider({ services, swiperRef }) {
       }}
       className="services-swiper"
     >
-      {services.map((service) => (
+      {services?.map((service) => (
         <SwiperSlide key={service.id}>
           <ServiceCard service={service} />
         </SwiperSlide>

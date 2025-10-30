@@ -2,10 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
+import { useIsRTL } from "@/utils/useIsRTL";
 export default function ServiceCard({ service }) {
+  const isRTL = useIsRTL();
   return (
-    <div className="bg-white p-3 rounded-[22px] border border-[#707070]/30 hover:shadow-md transition overflow-hidden flex flex-col h-full">
+    <div dir={isRTL ? "rtl" : "ltr"} className="bg-white p-3 rounded-[22px] border border-[#707070]/30 hover:shadow-md transition overflow-hidden flex flex-col h-full">
       {/* Image */}
       <div className="relative">
         <div className="relative w-full h-56 sm:h-60 md:h-64 rounded-t-[22px] overflow-hidden">
@@ -33,9 +34,9 @@ export default function ServiceCard({ service }) {
       </div>
 
       {/* Content */}
-      <div className="pt-6 pb-4 px-4 sm:pt-8 sm:pb-5 sm:px-5 md:pt-10 md:pb-6 md:px-6 flex flex-col flex-grow justify-between min-h-[248px]">
+      <div className="pt-10 pb-4 px-4   sm:pb-5 sm:px-5   md:pb-6 md:px-6 flex flex-col flex-grow justify-between min-h-[248px]">
         <div className="flex flex-col flex-grow">
-          <h3 className="text-[#1a1f3a] font-bold text-base sm:text-lg mb-2 text-center  ">
+          <h3 className="text-[#1a1f3a] font-bold text-base sm:text-lg mb-2    ">
             {service.title}
           </h3>
 
@@ -47,11 +48,11 @@ export default function ServiceCard({ service }) {
 
         <Link
           href="#"
-          className="text-[#FC942A] font-semibold inline-flex items-center justify-center sm:justify-start gap-2 hover:gap-3 transition-all mt-3 sm:mt-4"
+          className="text-[#FC942A] font-semibold  flex items-center justify-center   gap-2 hover:gap-3 transition-all mt-3 sm:mt-4"
         >
           {service.details} <FaArrowRight className="rtl:scale-x-[-1]" />
         </Link>
-      </div>  
+      </div>
     </div>
   );
 }
