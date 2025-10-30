@@ -59,7 +59,7 @@ export function StatsSection({ t }) {
                   alt="divider"
                   width={160}
                   height={80}
-                  className="absolute w-[110px] sm:w-[140px] lg:w-[157px] h-auto object-contain start-1/2 -translate-x-1/2 lg:start-[-30px] lg:translate-x-0 -top-2 z-[-1]"
+                  className="absolute w-[110px] sm:w-[140px] lg:w-[157px] h-auto object-contain start-1/2 rtl:start-auto rtl:end-1/2 -translate-x-1/2 rtl:lg:start-[unset]  rtl:lg:end-[-30px] lg:start-[-30px] lg:translate-x-0 -top-2 z-[-1]"
                 />
 
                 {/* CountUp Number */}

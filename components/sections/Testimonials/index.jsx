@@ -10,9 +10,11 @@ import { SectionHeader } from "./SectionHeader";
 import { TestimonialCard } from "./TestimonialCard";
 import { NavigationArrows } from "./NavigationArrows";
 import { testimonials } from "./testimonialsData";
+import { useIsRTL } from "@/utils/useIsRTL";
 
 export function TestimonialsSection({ t }) {
   const swiperRef = useRef(null);
+  const isRTL = useIsRTL();
 
   const handlePrevious = () => {
     if (swiperRef.current) {
@@ -32,7 +34,7 @@ export function TestimonialsSection({ t }) {
         <SectionHeader title={t("testimonials.subtitle")} />
 
         {/* Testimonial Swiper */}
-        <div className="max-w-[95%] sm:max-w-[98%] mx-auto relative pt-16 sm:pt-20">
+        <div className="max-w-[95%] sm:max-w-[98%] mx-auto relative pt-16 sm:pt-20" dir={isRTL ? "rtl" : "ltr"}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}

@@ -123,5 +123,11 @@
     "mostServices": {
         "title": "Most Requested Services",
         "subtitle": "Most Requested Services"
+    },
+    "clients": {
+        "title": "Our Clients"
+    },
+    "buttons": {
+        "getNow": "Get now"
     }
 }

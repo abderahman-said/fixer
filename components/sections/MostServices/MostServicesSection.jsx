@@ -4,9 +4,11 @@ import Image from "next/image";
 import ServicesSlider from "./ServiceSlider";
 import SwiperNavigation from "../services/SwiperNavigation";
 import { Services } from "../services/services";
+import { useIsRTL } from "@/utils/useIsRTL";
 
 export function MostServicesSection({ t }) {
   const swiperRef = useRef(null);
+  const isRTL = useIsRTL();
 
 
   return (
@@ -29,7 +31,14 @@ export function MostServicesSection({ t }) {
               alt="divider"
               width={120}
               height={80}
-              className="absolute w-[120px] sm:w-[140px] md:w-[157px] h-auto object-contain start-1/2 md:start-[-20px] -translate-x-1/2 md:translate-x-0 top-0 z-0"
+              className={
+                `absolute w-[120px] sm:w-[140px] md:w-[157px] h-auto object-contain top-0 z-0 ` +
+                (
+                  isRTL
+                    ? `   right-[-20px] md:translate-x-0`
+                    : `    left-[-20px] md:translate-x-0`
+                )
+              }
             />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[#1C2039] relative z-10">
               {t("mostServices.title")}

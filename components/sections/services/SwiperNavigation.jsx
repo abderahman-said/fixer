@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { classNames } from "@/utils/classNames";
+import { useIsRTL } from "@/utils/useIsRTL";
 
 export default function SwiperNavigation({ swiperRef }) {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const isRTL = useIsRTL();
 
   useEffect(() => {
     const swiper = swiperRef.current;
@@ -34,7 +36,7 @@ export default function SwiperNavigation({ swiperRef }) {
   return (
     <div className="flex gap-3">
       <button
-        onClick={() => swiperRef.current?.slidePrev()}
+        onClick={() => (isRTL ? swiperRef.current?.slideNext() : swiperRef.current?.slidePrev())}
         disabled={isBeginning}
         aria-label="Previous slide"
         className={classNames(
@@ -42,16 +44,16 @@ export default function SwiperNavigation({ swiperRef }) {
           !isBeginning ? activeStyle : disabledStyle
         )}
       >
-        <FaArrowLeft className="text-lg" />
+        <FaArrowLeft className="text-lg rtl:scale-x-[-1]" />
       </button>
 
       <button
-        onClick={() => swiperRef.current?.slideNext()}
+        onClick={() => (isRTL ? swiperRef.current?.slidePrev() : swiperRef.current?.slideNext())}
         disabled={isEnd}
         aria-label="Next slide"
         className={classNames(baseStyle, !isEnd ? activeStyle : disabledStyle)}
       >
-        <FaArrowRight className="text-lg" />
+        <FaArrowRight className="text-lg rtl:scale-x-[-1]" />
       </button>
     </div>
   );

@@ -4,23 +4,23 @@ import dataEN from "./Locale/En.json";
 import dataAR from "./Locale/Ar.json";
 
 const resources = {
-  en: { translation: dataEN },
-  ar: { translation: dataAR },
+    en: { translation: dataEN },
+    ar: { translation: dataAR },
 };
 
 i18n.use(initReactI18next).init({
-  resources,
-  fallbackLng: "ar",
-  lng: "ar",
-  debug: false,
+    resources,
+    fallbackLng: "en",
+    lng: "en",
+    debug: false,
 
-  interpolation: {
-    escapeValue: false,
-  },
+    interpolation: {
+        escapeValue: false,
+    },
 
-  react: {
-    useSuspense: false,
-  },
+    react: {
+        useSuspense: false,
+    },
 });
 
 export default i18n;

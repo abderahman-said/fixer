@@ -49,7 +49,7 @@ export default function ServiceCard({ service }) {
           href="#"
           className="text-[#FC942A] font-semibold inline-flex items-center justify-center sm:justify-start gap-2 hover:gap-3 transition-all mt-3 sm:mt-4"
         >
-          {service.details} <FaArrowRight />
+          {service.details} <FaArrowRight className="rtl:scale-x-[-1]" />
         </Link>
       </div>  
     </div>

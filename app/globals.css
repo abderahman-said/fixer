@@ -229,6 +229,9 @@ body {
 /*  */
 
 @media (max-width: 768px) {
+    .CtaSection {
+        background-size: cover;
+    }
     .hero {
         margin-top: -50px;
         padding-top: 100px !important;

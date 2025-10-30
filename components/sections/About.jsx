@@ -33,7 +33,7 @@ export function WhoWeAreSection({ t }) {
               className="text-[#FC942A] font-semibold flex items-center justify-center md:justify-start gap-2 hover:gap-3 transition-all"
             >
               {t("whoWeAre.readMore")}{" "}
-              <FaArrowRight className="text-[#585FAB]" />
+              <FaArrowRight className="text-[#585FAB] rtl:scale-x-[-1]" />
             </Link>
           </div>
 

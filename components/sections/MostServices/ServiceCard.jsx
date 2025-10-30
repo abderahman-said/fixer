@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function ServiceCard({ service }) {
+  const { t } = useTranslation();
   return (
     <div className="bg-white relative p-4 flex flex-col justify-between rounded-3xl shadow-lg min-h-[544px] overflow-hidden max-w-md mx-auto">
       {/* Image Section */}
@@ -52,8 +54,7 @@ export default function ServiceCard({ service }) {
       </div>
        {/* Button */}
         <Link href={service.link || "#"} className="w-full block text-center bg-white text-[#0F144A] border-2 border-[#0F144A] rounded-full py-3 px-6 font-semibold text-lg hover:bg-[#0F144A] hover:text-white transition-all duration-300">
-             get now
-           
+             {t("buttons.getNow")}
         </Link>
     </div>
   );

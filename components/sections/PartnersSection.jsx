@@ -5,9 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import SectionHeader from "../shared/SectionHeader";
+import { useIsRTL } from "@/utils/useIsRTL";
 
 export function PartnersSection({ t }) {
   const swiperRef = useRef(null);
+  const isRTL = useIsRTL();
 
   const partners = [
     { id: 1, logo: "/Group 12497.png", name: "FACiLiTY" },
@@ -29,6 +31,7 @@ export function PartnersSection({ t }) {
       </div>
 
         {/* Swiper Slider */}
+        <div dir={isRTL ? "rtl" : "ltr"}>
         <Swiper
           ref={swiperRef}
           modules={[Autoplay]}
@@ -59,6 +62,7 @@ export function PartnersSection({ t }) {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
     </section>
   );
 }

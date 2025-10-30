@@ -2,9 +2,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import ServiceCard from "./ServiceCard";
+import { useIsRTL } from "@/utils/useIsRTL";
 
 export default function ServicesSlider({ services, swiperRef }) {
+  const isRTL = useIsRTL();
   return (
+    <div dir={isRTL ? "rtl" : "ltr"}>
     <Swiper
       modules={[Navigation]}
       onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -23,5 +26,6 @@ export default function ServicesSlider({ services, swiperRef }) {
         </SwiperSlide>
       ))}
     </Swiper>
+    </div>
   );
 }
