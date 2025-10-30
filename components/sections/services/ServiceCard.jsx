@@ -34,14 +34,14 @@ export default function ServiceCard({ service }) {
       </div>
 
       {/* Content */}
-      <div className="pt-10 pb-4 px-4   sm:pb-5 sm:px-5   md:pb-6 md:px-6 flex flex-col flex-grow justify-between min-h-[248px]">
+      <div className="pt-10 pb-4 px-4   sm:pb-5 sm:px-5   md:pb-6 md:px-6 flex flex-col flex-grow justify-between min-h-[208px]">
         <div className="flex flex-col flex-grow">
           <h3 className="text-[#1a1f3a] font-bold text-base sm:text-lg mb-2    ">
             {service.title}
           </h3>
 
           {/* Controlled description height */}
-          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 flex-grow min-h-[60px] sm:min-h-[70px] md:min-h-[80px]">
+          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 flex-grow  min-h-[40px]">
             {service.description}
           </p>
         </div>

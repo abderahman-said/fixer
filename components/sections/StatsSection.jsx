@@ -23,7 +23,7 @@ export function StatsSection({ t }) {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="lg:col-span-3 text-center  " data-aos="fade-up" data-aos-delay="100">
+          <div className="lg:col-span-3   " data-aos="fade-up" data-aos-delay="100">
             <div className="relative inline-block">
               {/* Shadowed Title */}
               <h2 className="absolute -top-1 -start-1 text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1630]">
@@ -40,7 +40,7 @@ export function StatsSection({ t }) {
               </h2>
             </div>
 
-            <p className="text-gray-300 text-base sm:text-lg py-6 sm:py-8 leading-relaxed max-w-[600px] mx-auto lg:mx-0">
+            <p className="text-gray-300 text-base sm:text-lg py-6 sm:py-8 leading-relaxed max-w-[600px]   ">
               {t("stats.description")}
             </p>
 
@@ -50,7 +50,7 @@ export function StatsSection({ t }) {
           </div>
 
           {/* Right Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 lg:col-span-2 justify-center text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 lg:col-span-2 justify-center ">
             {stats.map((stat, index) => (
               <div key={index} className="relative" data-aos="zoom-in" data-aos-delay={100 + index * 100}>
                 {/* Divider Behind Number */}

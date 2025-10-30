@@ -75,18 +75,18 @@ html[lang="ar"] body {
     inset: 0;
     width: 100%;
     height: 100%;
-    background: url("../public/hero.png") no-repeat center center;
+    background: url("../public/hero.webp") no-repeat center center;
     background-size: cover;
 }
 
 html[dir="rtl"] .hero::before {
     transform: scaleX(-1);
-    background: url("../public/hero.png") no-repeat center center;
+    background: url("../public/hero.webp") no-repeat center center;
     background-size: cover;
 }
 
 .StatsSection {
-    background: url("../public/Mask Group 26.png") no-repeat center center;
+    background: url("../public/Mask Group 26.webp") no-repeat center center;
     background-size: cover;
 }
 
@@ -195,6 +195,12 @@ body {
 
 /* Responsive max-widths similar to Bootstrap */
 
+@media (max-width: 999px) {
+ .hero::before {
+    background: url("../public/hero.webp") no-repeat  ;
+    background-size: cover;
+}
+}
 @media (min-width: 576px) {
     .container {
         max-width: 540px;

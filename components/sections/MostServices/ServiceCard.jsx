@@ -39,7 +39,7 @@ export default function ServiceCard({ service }) {
 
         {/* Price */}
         <div className="flex items-baseline gap-2 mb-6">
-          <span className="text-[#0F144A] text-3xl font-bold"> {service?.price}</span>
+          <span className="text-[#0F144A] text-3xl font-bold"> {service?.price || "300" }</span>
            <Image
               src="/icons/reyal.png"
               alt="service icon"

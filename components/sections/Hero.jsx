@@ -8,7 +8,14 @@ import { useIsRTL } from "@/utils/useIsRTL";
 export function HeroSection({ t }) {
   const isRTL = useIsRTL();
   return (
-    <section className="hero relative min-h-[500px] md:min-h-[600px]">
+    <section className="hero relative  z-[1] min-h-[500px] md:min-h-[600px]">
+      <Image
+                src="/s.png"
+                alt=""
+                width={402}
+                height={140}
+                className=" object-contain w-[402px] z-[20] h-[140px] absolute -bottom-12 end-0 rtl:scale-x-[-1] select-none pointer-events-none"
+              />
       <div className="absolute inset-0 opacity-5 overflow-hidden">
         <div
           className={
@@ -19,7 +26,7 @@ export function HeroSection({ t }) {
           FIX
         </div>
       </div>
-      <div className="container mx-auto px-4 py-12 sm:py-16 lg:py-20 pb-0 relative z-10">
+      <div className="container overflow-hidden mx-auto py-24 sm:py-24 lg:py-20 pb-0 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
@@ -44,19 +51,19 @@ export function HeroSection({ t }) {
                   type="text"
                   placeholder={t("hero.searchPlaceholder")}
                   className={
-                    "bg-transparent border-e border-[#FC942A] ps-2 sm:ps-5 text-white text-sm sm:text-base placeholder-[#A8A8A8] outline-none flex-1 min-w-0 "
+                    "bg-transparent border-s border-[#FC942A] ps-2 sm:ps-5 text-white text-sm sm:text-base placeholder-[#A8A8A8] outline-none flex-1 min-w-0 "
                   }
                 />
               </div>
               <div
                 className={
-                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-e me-2 border-[#FC942A] "   
+                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-s me-2 border-[#FC942A] "   
                 }
               >
                 <span className="text-[#A8A8A8] text-sm lg:text-base whitespace-nowrap">
                   {t("hero.category")}
                 </span>
-                <FaChevronDown className="text-[#A8A8A8] text-xs" />
+                <FaChevronDown className="text-[#FC942A] text-xs" />
               </div>
               <button className="bg-[#FC942A] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 rounded-full hover:bg-[#ef8213cf] transition font-medium text-sm sm:text-base whitespace-nowrap flex-shrink-0">
                 {t("hero.search")}
@@ -68,7 +75,7 @@ export function HeroSection({ t }) {
           <div className="relative order-2 lg:order-1 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[500px] lg:max-w-none">
               <Image
-                src="/Group 59746.png"
+                src="/Group 59732.webp"
                 alt=""
                 width={1300}
                 height={1000}
