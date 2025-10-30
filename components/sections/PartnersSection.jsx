@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -10,6 +10,18 @@ import { useIsRTL } from "@/utils/useIsRTL";
 export function PartnersSection({ t }) {
   const swiperRef = useRef(null);
   const isRTL = useIsRTL();
+  useEffect(() => {
+    if (!swiperRef?.current) return;
+    const swiper = swiperRef.current;
+    try {
+      const currentIndex = swiper.activeIndex || 0;
+      if (typeof swiper.changeDirection === "function") {
+        swiper.changeDirection(isRTL ? "rtl" : "ltr");
+      }
+      swiper.slideTo(currentIndex, 0);
+      if (typeof swiper.update === "function") swiper.update();
+    } catch {}
+  }, [isRTL, swiperRef]);
 
   const partners = [
     { id: 1, logo: "/Group 12497.png", name: "FACiLiTY" },
@@ -33,7 +45,8 @@ export function PartnersSection({ t }) {
         {/* Swiper Slider */}
         <div dir={isRTL ? "rtl" : "ltr"}>
         <Swiper
-          ref={swiperRef}
+          key={isRTL ? "rtl" : "ltr"}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
           modules={[Autoplay]}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           loop

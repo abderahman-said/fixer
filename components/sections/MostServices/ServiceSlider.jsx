@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import ServiceCard from "./ServiceCard";
@@ -6,6 +7,18 @@ import { useIsRTL } from "@/utils/useIsRTL";
 
 export default function ServicesSlider({ services, swiperRef }) {
   const isRTL = useIsRTL();
+  useEffect(() => {
+    if (!swiperRef?.current) return;
+    const swiper = swiperRef.current;
+    try {
+      const currentIndex = swiper.activeIndex || 0;
+      if (typeof swiper.changeDirection === "function") {
+        swiper.changeDirection(isRTL ? "rtl" : "ltr");
+      }
+      swiper.slideTo(currentIndex, 0);
+      if (typeof swiper.update === "function") swiper.update();
+    } catch {}
+  }, [isRTL, swiperRef]);
   return (
     <div dir={isRTL ? "rtl" : "ltr"}>
     <Swiper

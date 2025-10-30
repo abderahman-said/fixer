@@ -49,6 +49,7 @@ export function TestimonialsSection({ t }) {
         {/* Testimonial Swiper */}
         <div className="max-w-[95%] sm:max-w-[98%] mx-auto relative pt-16 sm:pt-20" dir={isRTL ? "rtl" : "ltr"}>
           <Swiper
+            key={isRTL ? "rtl" : "ltr"}
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
