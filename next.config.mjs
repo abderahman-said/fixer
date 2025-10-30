@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true, // ✅ أسرع من Terser
-  poweredByHeader: false, // يخفي X-Powered-By header
+  swcMinify: true,
+  poweredByHeader: false,
   productionBrowserSourceMaps: false,
 
+ 
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,
@@ -23,7 +24,7 @@ const nextConfig = {
 
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ["react-icons"], // ✅ يقلل حجم الباندل
+    optimizePackageImports: ["react-icons"],
   },
 };
 

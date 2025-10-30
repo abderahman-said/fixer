@@ -7,8 +7,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CtaSection } from "@/components/sections/CtaSection";
-
-// ✅ Lazy load heavy sections
+ 
 const HeroSection = dynamic(() => import("@/components/sections/Hero"), { ssr: false });
 const WhoWeAreSection = dynamic(() => import("@/components/sections/About"), { ssr: false });
 const ServicesSection = dynamic(() => import("@/components/sections/services/ServicesSection"), { ssr: false });
