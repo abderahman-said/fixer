@@ -1,0 +1,127 @@
+{
+    "topBar": {
+        "phone": "0539669980",
+        "email": "info@fixerfm.com",
+        "arabic": "العربية",
+        "english": "English"
+    },
+    "navbar": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "business": "Business",
+        "contact": "Contact",
+        "bookVisit": "Book a Visit",
+        "account": "My Account"
+    },
+    "hero": {
+        "title": "We Fix It !",
+        "subtitle": "Comprehensive Facility Management Solutions",
+        "description": "Providing integrated and sustainable solutions for facility management.",
+        "searchPlaceholder": "Find your service now",
+        "category": "Category",
+        "search": "Search"
+    },
+    "whoWeAre": {
+        "title": "WHO WE ARE",
+        "subtitle": "WHO WE ARE",
+        "description": "Fixer is a Saudi-based company leading the transformation of operations and facility management through cutting-edge technology, deep industry expertise, and sustainable solutions. With decades of combined experience",
+        "readMore": "Read more"
+    },
+    "services": {
+        "title": "Our Service",
+        "subtitle": "Our Service",
+        "service1": "Soft Facility Management",
+        "service2": "Hard Facility Management",
+        "service3": "Landscaping",
+        "softFacility": {
+            "title": "Soft Facility Management",
+            "description": "We keep your facilities clean, safe, and welcoming",
+            "details": "Details"
+        },
+        "hardFacility": {
+            "title": "Hard Facility Management",
+            "description": "End-to-end technical solutions that keep your operations running seamlessly",
+            "details": "Details"
+        },
+        "landscaping": {
+            "title": "Landscaping",
+            "description": "Turning green visions into reality",
+            "details": "Details"
+        },
+        "civilMaintenance": {
+            "title": "Civil Maintenance & Repairs",
+            "description": "End-to-end technical solutions that keep your operations running seamlessly",
+            "details": "Details"
+        }
+    },
+    "stats": {
+        "title": "We are The Best in Industry",
+        "description": "Top companies trust Digit to expertly match them with high-quality, vetted talent for their most critical projects.",
+        "getRequest": "Get Request Now",
+        "fixerHands": "Fixer Hands",
+        "yearsExperience": "Years experience",
+        "happyClients": "Happy Clients",
+        "projectsCompleted": "Projects Completed"
+    },
+    "whyFixer": {
+        "title": "Why Fixer",
+        "subtitle": "Why Fixer",
+        "commitment": {
+            "title": "Commitment",
+            "description": "to sustainability"
+        },
+        "protecting": {
+            "title": "Protecting and enhancing",
+            "description": "asset value"
+        },
+        "raising": {
+            "title": "Raising quality",
+            "description": "of life standards"
+        },
+        "smart": {
+            "title": "Smart",
+            "description": "use of technology"
+        },
+        "always": {
+            "title": "Always",
+            "description": "responsive and accessible"
+        }
+    },
+    "partners": {
+        "title": "Our partner",
+        "subtitle": "Our partner"
+    },
+    "testimonials": {
+        "title": "Hear about us from our Client",
+        "subtitle": "Hear about us from our Client",
+        "quote": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "author": "Mohammed Mansi",
+        "position": "CEO Smart Cat",
+        "q2": "The service quality exceeded our expectations. Professional team and timely delivery made our project a success.",
+        "a2": "Sarah Johnson",
+        "p2": "Operations Manager",
+        "q3": "Outstanding customer support and attention to detail. They truly understand what clients need and deliver accordingly.",
+        "a3": "Michael Chen",
+        "p3": "Business Owner",
+        "q4": "Highly recommend their services! The team went above and beyond to ensure everything was perfect.",
+        "a4": "Emily Rodriguez",
+        "p4": "Marketing Director"
+    },
+    "cta": {
+        "title": "Fixer Now",
+        "subtitle": "Because every home deserves a perfect fix",
+        "description": "Maintaining the asset value of buildings and reducing operational costs.",
+        "contactUs": "Contact us"
+    },
+    "footer": {
+        "description": "Comprehensive Facility Management Solutions",
+        "newsletterPlaceholder": "Write your email adress",
+        "send": "Send",
+        "copyright": "All Copy Right @ Fixer Co 2026"
+    },
+    "mostServices": {
+        "title": "Most Requested Services",
+        "subtitle": "Most Requested Services"
+    }
+}

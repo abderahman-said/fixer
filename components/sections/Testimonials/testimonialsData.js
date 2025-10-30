@@ -1,0 +1,33 @@
+export const testimonials = (t) => [{
+        id: 1,
+        logo: "/Group 12497.png",
+        icon: "/icons/Image 14.png",
+        quote: t("testimonials.quote"),
+        author: t("testimonials.author"),
+        position: t("testimonials.position"),
+    },
+    {
+        id: 2,
+        logo: "/Group 12497.png",
+        icon: "/icons/Image 14.png",
+        quote: t("testimonials.q2"),
+        author: t("testimonials.a2"),
+        position: t("testimonials.p2"),
+    },
+    {
+        id: 3,
+        logo: "/Group 12497.png",
+        icon: "/icons/Image 14.png",
+        quote: t("testimonials.q3"),
+        author: t("testimonials.a3"),
+        position: t("testimonials.p3"),
+    },
+    {
+        id: 4,
+        logo: "/Group 12497.png",
+        icon: "/icons/Image 14.png",
+        quote: t("testimonials.q4"),
+        author: t("testimonials.a4"),
+        position: t("testimonials.p4"),
+    },
+];
