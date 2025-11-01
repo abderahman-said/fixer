@@ -23,8 +23,7 @@ export default function FixerLandingPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <TopBar t={t} />
-      <Navbar t={t} />
+     
        <HeroSection t={t} /> 
       <div data-aos="fade-up"><WhoWeAreSection t={t} /></div>
       <div data-aos="fade-up"><ServicesSection t={t} /></div>

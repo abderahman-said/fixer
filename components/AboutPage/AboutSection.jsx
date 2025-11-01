@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
-import SectionHeader from "../shared/SectionHeader";
 import Link from "next/link";
+import SectionHeader from "../shared/SectionHeader";
 
-export function WhoWeAreSection({ t }) {
+export function AboutSection({ t }) {
   return (
     <section
       className="py-16 md:py-20 pt-20 md:pt-36 relative overflow-hidden bg-white"
@@ -13,14 +13,15 @@ export function WhoWeAreSection({ t }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 items-center">
           {/* Text Content */}
           <div
-            className="order-2 md:order-1 text-start  "
+            className="order-2 md:order-1 text-start "
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <SectionHeader
               title={t("whoWeAre.title")}
               subtitle={t("whoWeAre.subtitle")}
-              borderWhite={false}
+              subtitleClassName="blue-text"
+              borderWhite={true}
             />
 
             <Image
@@ -57,6 +58,14 @@ export function WhoWeAreSection({ t }) {
               width={800}
               height={190}
               className="hidden md:block absolute bottom-32 -right-32 w-[600px] h-[140px] object-contain opacity-80"
+              priority
+            />
+            <Image
+              src="/about-bg.png"
+              alt="about background"
+              width={572}
+              height={500}
+              className="hidden md:block absolute bottom-10 left-14 w-[90%]   h-auto object-cover  z-10"
               priority
             />
 

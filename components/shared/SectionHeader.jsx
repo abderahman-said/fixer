@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function SectionHeader({
   title,
   subtitle,
+  subtitleClassName = "text-[#1C2039]",
   divider = "/divider-orange.png",
   className = "",
   borderWhite = false,
@@ -10,7 +11,7 @@ export default function SectionHeader({
   return (
     <div className={`relative   ${className}`}>
       {/* Background Title */}
-      <div className="absolute -top-10 start-0 sm:-top-12 md:-top-16 text-[40px] sm:text-[60px] md:text-[88px] font-bold text-[#F0F0F4] whitespace-nowrap pointer-events-none select-none max-w-full overflow-visible leading-none">
+      <div className="absolute  -top-10 start-0 sm:-top-12 md:-top-16 text-[40px] sm:text-[60px] md:text-[88px] font-bold text-[#F0F0F4] whitespace-nowrap pointer-events-none select-none max-w-full overflow-visible leading-none">
         {title}
       </div>
 
@@ -27,7 +28,7 @@ export default function SectionHeader({
 
       {/* Subtitle */}
       <h2
-        className={`text-2xl sm:text-3xl md:text-5xl text-[#1C2039] relative z-10 font-bold w-fit leading-tight ${
+        className={`text-2xl sm:text-3xl md:text-5xl  ${subtitleClassName} relative z-10 font-bold w-fit leading-tight ${
           borderWhite ? "text-border-white" : ""
         }`}
       >

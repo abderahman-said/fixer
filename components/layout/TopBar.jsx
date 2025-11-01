@@ -9,8 +9,10 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
-export function TopBar({ t }) {
+export function TopBar() {
+  const { t } = useTranslation();
   const router = useRouter();
   const pathname = usePathname();
 
@@ -64,14 +66,22 @@ export function TopBar({ t }) {
           <div className="flex gap-2 md:ml-6 text-center md:text-left">
             <button
               onClick={() => switchLang("ar")}
-              className={currentLang === "ar" ? "text-[#FC942A]" : "opacity-90 hover:opacity-100"}
+              className={
+                currentLang === "ar"
+                  ? "text-[#FC942A]"
+                  : "opacity-90 hover:opacity-100"
+              }
             >
               {t("topBar.arabic")}
             </button>
             <span>|</span>
             <button
               onClick={() => switchLang("en")}
-              className={currentLang === "en" ? "text-[#FC942A]" : "opacity-90 hover:opacity-100"}
+              className={
+                currentLang === "en"
+                  ? "text-[#FC942A]"
+                  : "opacity-90 hover:opacity-100"
+              }
             >
               {t("topBar.english")}
             </button>

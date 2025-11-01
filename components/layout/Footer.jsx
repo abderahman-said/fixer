@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   FaFacebookF,
@@ -5,32 +6,34 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-export function Footer({ t }) {
+export function Footer() {
+  const { t } = useTranslation();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="bg-[#1a1f3a] text-white relative overflow-hidden">
-       <button
-          onClick={scrollToTop}
-          className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] absolute start-4 sm:start-8 lg:-start-20 bottom-16 sm:bottom-18 lg:bottom-20 rounded-full border-2 border-[#FC942A] flex items-center justify-center text-[#FC942A] hover:bg-[#FC942A] hover:text-white transition"
+      <button
+        onClick={scrollToTop}
+        className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] lg:w-[50px] lg:h-[50px] absolute start-4 sm:start-8 lg:-start-20 bottom-16 sm:bottom-18 lg:bottom-20 rounded-full border-2 border-[#FC942A] flex items-center justify-center text-[#FC942A] hover:bg-[#FC942A] hover:text-white transition"
+      >
+        <svg
+          className="w-5 h-5 sm:w-6 sm:h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
-          <svg
-            className="w-5 h-5 sm:w-6 sm:h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 15l7-7 7 7"
-            />
-          </svg>
-        </button>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </button>
       <div className="container mx-auto px-4 pt-12 sm:pt-14 lg:pt-16 relative z-10">
         {/* Footer Top */}
         <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 items-center">
@@ -47,7 +50,10 @@ export function Footer({ t }) {
 
           {/* Footer Navigation */}
           <div className="flex flex-wrap w-full text-base sm:text-sm lg:text-xl gap-3 sm:gap-4 lg:gap-2 items-center justify-center lg:justify-between max-w-5xl">
-            <a href="#" className="text-white  relative hover:text-[#FC942A] transition">
+            <a
+              href="#"
+              className="text-white  relative hover:text-[#FC942A] transition"
+            >
               {t("navbar.home")}
               <div className="h-1 absolute left-0 sm:h-1.5 rounded-xs bg-[#FC942A] w-8 sm:w-10 mt-1 mx-auto lg:mx-0"></div>
             </a>
@@ -89,8 +95,6 @@ export function Footer({ t }) {
             </button>
           </div>
         </div>
-
-        
 
         {/* Footer Bottom */}
         <div className="border-t border-[#707070] py-4 sm:py-5 mt-6 sm:mt-8 lg:mt-9">

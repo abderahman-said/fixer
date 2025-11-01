@@ -10,12 +10,12 @@ export function HeroSection({ t }) {
   return (
     <section className="hero relative  z-[1] min-h-[500px] md:min-h-[600px]">
       <Image
-                src="/s.png"
-                alt=""
-                width={402}
-                height={140}
-                className=" object-contain w-[402px] z-[20] h-[140px] absolute -bottom-12 end-0 rtl:scale-x-[-1] select-none pointer-events-none"
-              />
+        src="/s.png"
+        alt=""
+        width={402}
+        height={140}
+        className=" object-contain w-[402px] z-[20] h-[140px] absolute -bottom-12 end-0 rtl:scale-x-[-1] select-none pointer-events-none"
+      />
       <div className="absolute inset-0 opacity-5 overflow-hidden">
         <div
           className={
@@ -57,7 +57,7 @@ export function HeroSection({ t }) {
               </div>
               <div
                 className={
-                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-s me-2 border-[#FC942A] "   
+                  "hidden md:flex items-center gap-2 px-3 lg:px-4 border-s me-2 border-[#FC942A] "
                 }
               >
                 <span className="text-[#A8A8A8] text-sm lg:text-base whitespace-nowrap">

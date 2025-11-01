@@ -6,8 +6,10 @@ import { FaBars } from "react-icons/fa";
 import { DesktopNav } from "./DesktopNav";
 import { MobileSidebar } from "./MobileSidebar";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
-export function Navbar({ t }) {
+export function Navbar() {
+  const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -47,7 +49,10 @@ export function Navbar({ t }) {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href={`/${currentLang}`} className="text-white text-3xl font-bold">
+          <Link
+            href={`/${currentLang}`}
+            className="text-white text-3xl font-bold"
+          >
             <Image
               src="/logo.svg"
               alt="Fixer Logo"
