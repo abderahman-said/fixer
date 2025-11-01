@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import {
   FaHandshake,
@@ -42,12 +43,22 @@ export default function ValueChainSection() {
     <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center gap-3 mb-12">
-          <div className="flex gap-1">
-            <div className="w-3 h-3 rounded-full bg-orange-500"></div>
-            <div className="w-3 h-3 rounded-full bg-orange-400"></div>
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900">Value Chain</h2>
+        <div className="flex relative items-center gap-3 mb-12">
+          {/* Divider */}
+          <Image
+            src={"/divider-orange.png"}
+            alt="divider"
+            width={120}
+            height={80}
+            className="absolute w-[80px] sm:w-[120px] md:w-[157px] h-[20px] sm:h-[30px] md:h-[39px] object-contain start-0 sm:start-[-10px] md:start-[-20px] top-0 z-0"
+          />
+
+          {/* Subtitle */}
+          <h2
+            className={`text-2xl sm:text-3xl md:text-5xl text-[#1C2039] relative z-10 font-bold w-fit leading-tight`}
+          >
+            Value Chain
+          </h2>
         </div>
 
         {/* Steps Grid */}
