@@ -69,33 +69,30 @@ export default function ValueChainSection() {
             return (
               <div
                 key={step.id}
-                className="relative w-[220px] sm:w-[230px] md:w-[240px] h-[320px] flex-shrink-0"
+                className="relative w-[210px] sm:w-[220px] md:w-[230px] h-[300px] flex-shrink-0"
               >
                 {/* Number behind card */}
-                <div
-                  className="absolute text-[160px] font-bold select-none pointer-events-none"
-                  style={{
-                    color: "#3955A2",
-                    opacity: "0.19",
-                    bottom: "-60px",
-                    left: "-60px",
-                    zIndex: 0,
-                  }}
-                >
+                <div className="absolute text-[160px] font-bold select-none pointer-events-none text-[#3955A2]/20 -bottom-[60px] -left-[60px] z-0">
                   {step.number}
                 </div>
 
                 {/* Card */}
-                <div className="relative bg-gray-50 rounded-2xl p-8 h-full flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow z-10">
-                  {/* Icon */}
-                  <div className="mb-6">
-                    <div className="w-20 h-20 rounded-full border-2 border-orange-400 bg-white flex items-center justify-center">
-                      <IconComponent className="w-9 h-9 text-blue-900" />
+                <div className="relative shadow-md bg-white rounded-2xl pt-14 pb-8 px-6 h-full flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow z-10">
+                  {/* Icon - half outside the card with visible shadow and outline around it */}
+                  <div className="absolute -top-10 left-1/2 -translate-x-1/2">
+                    <div className="relative w-20 h-20 flex items-center justify-center">
+                      {/* Circle with shadow */}
+                      <div className="w-20 h-20 rounded-full bg-white shadow-lg relative z-10 flex items-center justify-center">
+                        <IconComponent className="w-9 h-9 text-blue-900" />
+                      </div>
+
+                      {/* Outline around (behind circle) */}
+                      <div className="absolute inset-0 rounded-full outline outline-[1px] outline-[#FC942A] scale-[1.2] -z-10"></div>
                     </div>
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-lg font-bold text-blue-900 mb-3">
+                  <h3 className="text-lg font-bold text-blue-900 mb-3 mt-6">
                     {step.title}
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">
